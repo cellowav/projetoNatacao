@@ -1,49 +1,16 @@
-<?php
-	$categorias = [];
-	$categorias[] = "infantil";
-	$categorias[] = "adolescente";
-	$categorias[] = "adulto";
-	$categorias[] = "idoso";
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Formulário de inscrição</title>
+	<meta charset="UTF-8">
+</head>
+<body>
+	<p>Formulário de inscrição de competidor:</p>
 
-	//print_r($categorias);
-
-	$nome = "Eduardo";
-	$idade = 16;
-
-	//var_dump($nome, $idade);
-
-	if($idade >= 6 && $idade <= 12)
-	{
-
-		for($i = 0; $i <= count($categorias); $i++)
-		{
-			if($categorias[$i] == "infantil")
-			{
-				echo "O nadador ". $nome ." competirá na categoria ". $categorias[0];
-			}
-			
-		}
-
-	}else if($idade >= 13 && $idade < 18)
-	{
-
-		for($i = 0; $i <= count($categorias); $i++)
-		{
-			if($categorias[$i] == "adolescente")
-			{
-				echo "O nadador ". $nome ." competirá na categoria " . $categorias[1];
-			}
-		}
-	}else
-	{
-
-		for($i = 0; $i <= count($categorias); $i++)
-		{
-			if($categorias[$i] == "adulto")
-			{
-				echo "O nadador ". $nome ." competirá na categoria ". $categorias[2];;
-			}
-		}
-	}
-
-?>
+	<form action="script.php" method="post">
+		<p> Nome: <input type="text" name="nome"></p>
+		<p> idade: <input type="text" name="idade"></p>
+		<p> <input type="submit" value="Enviar"></p>
+	</form>
+</body>
+</html>
